@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RxJavaRetroFit</string>
+    <string name="next">Next</string>
+    <string name="fetch">Fetch</string>
+    <string name="Space_X_Launches">SpaceX Launches</string>
+    <string name="refresh">REFRESH</string>
+</resources>
