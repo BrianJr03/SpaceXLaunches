@@ -5,6 +5,9 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import jr.brian.rxjavaretrofit.R
 import jr.brian.rxjavaretrofit.databinding.ActivityMainBinding
 import jr.brian.rxjavaretrofit.model.data.remote.ApiService
@@ -25,6 +28,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        AppCenter.start(
+            // TODO - Store appSecret outside of code
+            application,
+            "a14e81ac-1855-4aec-bb3c-41d4228e6c2b",
+            Analytics::class.java,
+            Crashes::class.java
+        )
         fetchLatestNews()
         binding.fetchBtn.setOnClickListener {
             fetchLatestNews()
