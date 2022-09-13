@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import jr.brian.rxjavaretrofit.model.data.spacex.Repo
+import jr.brian.rxjavaretrofit.model.data.Repo
 import io.reactivex.android.schedulers.AndroidSchedulers
 import jr.brian.rxjavaretrofit.model.data.spacex.SpaceXLaunches
 

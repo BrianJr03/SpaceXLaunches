@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import jr.brian.rxjavaretrofit.R
 import jr.brian.rxjavaretrofit.databinding.ActivityMainBinding
 import jr.brian.rxjavaretrofit.model.data.remote.ApiService
-import jr.brian.rxjavaretrofit.model.data.spacex.Repo
+import jr.brian.rxjavaretrofit.model.data.Repo
 import jr.brian.rxjavaretrofit.model.data.spacex.SpaceXLaunches
 import jr.brian.rxjavaretrofit.viewmoodel.ViewModel
 import jr.brian.rxjavaretrofit.viewmoodel.ViewModelFactory
@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        callApi()
+        fetchLatestNews()
         binding.fetchBtn.setOnClickListener {
-            callApi()
+            fetchLatestNews()
         }
     }
 
-    private fun callApi() {
+    private fun fetchLatestNews() {
         viewModelFactory = ViewModelFactory(Repo(ApiService.instance()))
         viewModel = ViewModelProvider(this, viewModelFactory)[ViewModel::class.java].apply {
             getV3Launches()

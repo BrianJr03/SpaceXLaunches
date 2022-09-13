@@ -2,7 +2,7 @@ package jr.brian.rxjavaretrofit.viewmoodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import jr.brian.rxjavaretrofit.model.data.spacex.Repo
+import jr.brian.rxjavaretrofit.model.data.Repo
 import java.lang.IllegalArgumentException
 
 @Suppress("UNCHECKED_CAST")
